@@ -1,5 +1,6 @@
 locals {
   deployment_name       = var.deployment_name != "" ? var.deployment_name : terraform.workspace
+  public_key            = fileexists(var.public_key) ? file(var.public_key) : var.public_key
   subnet_address_ranges = [cidrsubnet(var.vpc_address_range, 8, 1), cidrsubnet(var.vpc_address_range, 8, 2)]
   trento_server_ip      = var.trento_server_ip != "" ? var.trento_server_ip : cidrhost(cidrsubnet(var.vpc_address_range, 8, 0), 5)
   hana_ips              = length(var.hana_ips) == 2 ? var.hana_ips : [cidrhost(local.subnet_address_ranges.0, 10), cidrhost(local.subnet_address_ranges.1, 11)]
@@ -7,7 +8,7 @@ locals {
 
 resource "aws_key_pair" "key_pair" {
   key_name   = "${local.deployment_name} - terraform"
-  public_key = file(var.public_key)
+  public_key = local.public_key
 }
 
 data "aws_availability_zones" "available" {
