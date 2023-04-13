@@ -14,3 +14,7 @@ output "hana_public_ip" {
   value = compact(module.hana_node.hana_public_ip)
 }
 
+output "vpc_id" {
+  value = aws_vpc.vpc.id
+}
+
