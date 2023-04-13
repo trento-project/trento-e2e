@@ -1,0 +1,7 @@
+aws_region            = "eu-central-1"
+aws_access_key_id     = "your-access-key"
+aws_secret_key        = "your-secret-key"
+public_key            = "~/.ssh/id_rsa.pub"
+hana_instancetype     = "r6i.xlarge"
+hana_iamge_ids        = ["ami-first-hana-node-id", "ami-second-hana-node-id"]
+trento_server_image_id = "ami-0eb74f8591f0d49c8" # SLES4SAP15SP3 PAYG image id
