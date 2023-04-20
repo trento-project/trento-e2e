@@ -1,0 +1,9 @@
+deployment_name = "trento"
+aws_region = "eu-central-1"
+aws_access_key_id     = "your-access-key"
+aws_secret_key = "your-secret-key"
+public_key = "~/.ssh/id_rsa.pub"
+hana_instancetype = "r6i.xlarge"
+hana_image_id = "ami-hana-node"
+app_image_id = "ami-app-node"
+trento_server_image_id = "ami-00435b99a42e439bd" # SLES4SAP15SP$ PAYG image id

@@ -49,7 +49,7 @@ resource "aws_route" "hana_cluster_vip" {
 }
 
 module "sap_cluster_policies" {
-  source            = "../sap_cluster_policies"
+  source            = "../../../generic_modules/sap_cluster_policies"
   deployment_name   = var.deployment_name
   name              = var.name
   aws_region        = var.aws_region

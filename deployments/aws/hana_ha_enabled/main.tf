@@ -158,7 +158,7 @@ resource "aws_security_group_rule" "http" {
 }
 
 module "trento_server" {
-  source                        = "./modules/trento_server"
+  source                        = "../generic_modules/trento_server"
   deployment_name               = local.deployment_name
   availability_zone             = element(data.aws_availability_zones.available.names, 0)
   image_id                      = var.trento_server_image_id
