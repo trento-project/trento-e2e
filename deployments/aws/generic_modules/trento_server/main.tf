@@ -21,4 +21,10 @@ resource "aws_instance" "trento_server" {
     Name      = "${var.deployment_name}-trento-server"
     Workspace = var.deployment_name
   }
+
+  user_data = <<EOF
+#!/bin/bash
+sudo su
+SUSEConnect -p PackageHub/15.4/x86_64
+EOF
 }
