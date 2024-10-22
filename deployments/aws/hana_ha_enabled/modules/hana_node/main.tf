@@ -20,6 +20,8 @@ locals {
       tag            = "${var.deployment_name}-cluster"
       virtual_ip     = var.hana_virtual_ip
       route_table_id = var.route_table_id
+      access_key     = var.aws_access_key_id
+      secret_key     = var.aws_secret_key
     }
   )
 }
