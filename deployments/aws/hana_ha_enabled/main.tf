@@ -157,6 +157,16 @@ resource "aws_security_group_rule" "http" {
   security_group_id = aws_security_group.secgroup.id
 }
 
+resource "aws_security_group_rule" "https" {
+  type        = "ingress"
+  from_port   = 443
+  to_port     = 443
+  protocol    = "tcp"
+  cidr_blocks = ["0.0.0.0/0"]
+
+  security_group_id = aws_security_group.secgroup.id
+}
+
 module "trento_server" {
   source                        = "../generic_modules/trento_server"
   deployment_name               = local.deployment_name
@@ -171,6 +181,8 @@ module "trento_server" {
 module "hana_node" {
   source                        = "./modules/hana_node"
   aws_region                    = var.aws_region
+  aws_access_key_id             = var.aws_access_key_id
+  aws_secret_key                = var.aws_secret_key
   deployment_name               = local.deployment_name
   instance_type                 = var.hana_instancetype
   availability_zones            = data.aws_availability_zones.available.names

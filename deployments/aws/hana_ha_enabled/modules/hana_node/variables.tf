@@ -8,6 +8,16 @@ variable "aws_region" {
   type = string
 }
 
+variable "aws_access_key_id" {
+  description = "AWS access key id"
+  type        = string
+}
+
+variable "aws_secret_key" {
+  description = "AWS secret key"
+  type        = string
+}
+
 variable "name" {
   description = "hostname, without the domain part"
   type        = string
