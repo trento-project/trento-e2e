@@ -1,0 +1,21 @@
+deployment_name   = "my-deployment"
+aws_region        = "eu-central-1"
+aws_access_key_id = "my-aws-access-key-id"
+aws_secret_key    = "my-aws-secret-key"
+public_key        = "path/to/key.pub"
+license_email     = "name.surname@suse.com"
+vpc_address_range = "10.1.0.0/16"
+machines = [
+  {
+    name         = "server1"
+    image_id     = "ami-1234567876543"
+    license_key  = "my-sles-key"
+    sles_version = "15.5"
+  },
+  {
+    name         = "server2"
+    image_id     = "ami-9876543456"
+    license_key  = "m-other-sles-key"
+    sles_version = "15.6"
+  },
+]
