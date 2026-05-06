@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: SUSE LLC
+# SPDX-License-Identifier: Apache-2.0
+
 data "aws_instance" "hana" {
   count       = 2
   instance_id = element(aws_instance.hana.*.id, count.index)

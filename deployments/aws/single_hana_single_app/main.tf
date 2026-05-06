@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: SUSE LLC
+# SPDX-License-Identifier: Apache-2.0
+
 locals {
   deployment_name = var.deployment_name != "" ? var.deployment_name : terraform.workspace
   public_key      = fileexists(var.public_key) ? file(var.public_key) : var.public_key

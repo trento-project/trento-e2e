@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: SUSE LLC
+# SPDX-License-Identifier: Apache-2.0
+
 resource "aws_instance" "trento_server" {
   ami                         = var.image_id
   instance_type               = var.instance_type

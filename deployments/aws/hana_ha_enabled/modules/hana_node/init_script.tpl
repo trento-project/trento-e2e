@@ -1,3 +1,8 @@
+{*
+ SPDX-FileCopyrightText: SUSE LLC
+ SPDX-License-Identifier: Apache-2.0
+*}
+
 #!/bin/bash
 sudo su
 sed -i 's/aws_access_key_id = \(.*\)/aws_access_key_id = ${access_key}/' /root/.aws/config

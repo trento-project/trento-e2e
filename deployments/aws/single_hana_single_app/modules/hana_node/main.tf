@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: SUSE LLC
+# SPDX-License-Identifier: Apache-2.0
+
 locals {
   disks_number = length(split(",", var.hana_data_disks_configuration["disks_size"]))
   disks_name   = [for disk_name in split(",", var.block_devices) : trimspace(disk_name)]

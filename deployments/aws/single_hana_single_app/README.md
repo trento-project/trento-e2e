@@ -1,3 +1,8 @@
+<!--
+  ~ SPDX-FileCopyrightText: SUSE LLC
+  ~ SPDX-License-Identifier: Apache-2.0
+-->
+
 # How to use
 
 This deployment consists on a single HANA and single ASCS/PAS deployment. Even though it was not strictly needed, the ASCS/PAS machine connects to a NFS share where `/sapmnt/` and `/usr/sap/SID/SYS` folders are stored. This means that a EFS backup system is needed together with the 2 machine snapshots.

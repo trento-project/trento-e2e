@@ -1,3 +1,8 @@
+{*
+ SPDX-FileCopyrightText: SUSE LLC
+ SPDX-License-Identifier: Apache-2.0
+*}
+
 {
     "Version": "2012-10-17",
     "Statement": [

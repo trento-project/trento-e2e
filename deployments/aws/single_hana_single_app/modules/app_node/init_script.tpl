@@ -1,3 +1,8 @@
+{*
+ SPDX-FileCopyrightText: SUSE LLC
+ SPDX-License-Identifier: Apache-2.0
+*}
+
 #!/bin/bash
 rm -rf /tmp/sap_efs
 mkdir /tmp/sap_efs
