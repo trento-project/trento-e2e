@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: SUSE LLC
+# SPDX-License-Identifier: Apache-2.0
+
 # Network resources: subnets, routes, etc
 
 resource "aws_subnet" "app" {

@@ -1,3 +1,8 @@
+<!--
+  ~ SPDX-FileCopyrightText: SUSE LLC
+  ~ SPDX-License-Identifier: Apache-2.0
+-->
+
 # How to use
 
 This deployment consist in one or more SLES or SLES4SAP virtual machines on AWS EC2. This allow to have an arbitrary group of machines under the same vpc and that can be added and removed with ease, just by modifying the variable configuration.

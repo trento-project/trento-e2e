@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: SUSE LLC
+# SPDX-License-Identifier: Apache-2.0
+
 # Create roles and policies fos SAP clusters
 
 data "aws_caller_identity" "current" {}

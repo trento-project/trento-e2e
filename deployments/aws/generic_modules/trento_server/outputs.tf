@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: SUSE LLC
+# SPDX-License-Identifier: Apache-2.0
+
 data "aws_instance" "trento_server" {
   instance_id = aws_instance.trento_server.id
 }

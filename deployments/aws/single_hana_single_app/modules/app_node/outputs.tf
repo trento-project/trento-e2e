@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: SUSE LLC
+# SPDX-License-Identifier: Apache-2.0
+
 data "aws_instance" "app" {
   instance_id = aws_instance.app.id
 }
